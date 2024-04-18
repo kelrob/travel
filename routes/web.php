@@ -30,7 +30,7 @@ Route::view('/404', 'errors.404')->name('404');
 Route::view('/receipts', 'layouts.receipt')->name('receipt');
 Route::view('/visa-get-started', 'layouts.visa.get-started')->name('visa-get-started');
 Route::view('/success', 'layouts.success')->name('success');
-
+Route::get('/destination-details/{id}/{slug}', [PublicController::class, 'showDestinationDetails'])->name('destination-info');
 
 // Dynamic routes
 Route::get('/', [PublicController::class, 'index'])->name('/');

@@ -30,7 +30,7 @@ class PublicController extends Controller
             return redirect()->route('404');
         }
 
-        return view('layouts.destinations', compact('destination'));
+        return view('layouts.destination-details', compact('destination'));
     }
 
     public function showTourDetails($id, $slug): View|RedirectResponse

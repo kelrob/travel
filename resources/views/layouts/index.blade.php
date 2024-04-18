@@ -657,7 +657,7 @@
                             $slug = Illuminate\Support\Str::slug($destination->name, '-');
                         @endphp
                         <div class="swiper-slide">
-                            <a href="{{@route('destination-details', ['id' => $destination->id, 'slug' => $slug])}}"
+                            <a href="{{@route('destination-info', ['id' => $destination->id, 'slug' => $slug])}}"
                                class="citiesCard -type-1 d-block rounded-4">
                                 <div class="citiesCard__image ratio ratio-3:4">
                                     <img src="#"
