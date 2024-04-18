@@ -17,7 +17,7 @@
             <div class="row justify-center text-center">
                 <div class="col-xl-6 col-lg-8 col-md-10">
                     <h1 class="text-40 md:text-25 fw-600 text-white">
-                        Looking for joy?
+                        Who are we?
                     </h1>
                     <div class="text-white mt-15">Your trusted trip companion</div>
                 </div>
@@ -94,18 +94,52 @@
                     <h2 class="text-30 fw-600">About GTWTravels.com</h2>
                     <p class="mt-5">These popular destinations have a lot to offer</p>
 
-                    <p class="text-dark-1 mt-60 lg:mt-40 md:mt-20">
-                        London is a shining example of a metropolis at the highest peak
-                        of modernity and boasts an economy and cultural diversity that’s
-                        the envy of other global superpowers.
+                    <p class="text-dark-1 mt-60 lg:mt-40 md:mt-10">
+                        Great Travel World Travel aims to be the ultimate companion for travelers worldwide,
+                        facilitating seamless and enjoyable travel experiences for every individual. The brand prides
+                        itself on its commitment to excellence, reliability, and personalized service
+                        <br/><br/></p>
+                    <h3>Mission</h3>
+                    <p>
+                        Our mission at Great Travel World Travel is to empower travelers by simplifying the complexities
+                        of travel planning, offering expert guidance, and providing unparalleled support throughout
+                        their journey. We believe in making travel accessible, stress-free, and unforgettable for
+                        everyone.
                         <br/><br/>
-                        Take the opportunity to acquaint yourself with its fascinating
-                        history chronicled by institutions like the British Museum as
-                        well as see how far it has come by simply riding the Tube and
-                        passing by celebrated landmarks like Buckingham Palace,
-                        Westminster Abbey, and marvels like Big Ben, the London Eye, and
-                        the Tower Bridge.
                     </p>
+
+                    <h3>Target Audience</h3>
+                    <p>
+                        Great Travel World Travel caters to a diverse clientele ranging from seasoned globetrotters
+                        seeking unique adventures to first-time travelers embarking on their dream vacations. Our
+                        services are tailored to meet the needs of solo travelers, families, couples, and groups alike,
+                        ensuring that each customer receives personalized attention and assistance.
+                        <br/><br/>
+                    </p>
+
+                    <h3 class="mt-20 mb-10">Brand Values</h3>
+                    <ol style="padding: 0; margin: 0;">
+                        <li><b>Excellence</b>: We are dedicated to delivering exceptional service and exceeding customer
+                            expectations at every touchpoint.
+                        </li>
+                        <li>
+                            <b>Reliability</b>: Customers can trust Great Travel World Travel to handle every aspect of
+                            their
+                            travel arrangements with professionalism, efficiency, and attention to detail.
+                        </li>
+                        <li>
+                            <b>Personalization</b>: We understand that every traveler is unique, which is why we offer
+                            customized solutions to suit individual preferences, budgets, and interests.
+                        </li>
+                        <li><b>Community</b>: Great Travel World Travel fosters a sense of community among travelers,
+                            encouraging connections, cultural exchange, and shared experiences.
+                        </li>
+                        <li>
+                            <b>Innovation</b>: We embrace innovation and technology to continuously enhance our services
+                            and adapt to the evolving needs of modern travelers.
+                        </li>
+
+                    </ol>
                 </div>
 
                 <div class="col-lg-6">
