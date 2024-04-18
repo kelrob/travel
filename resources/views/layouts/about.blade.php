@@ -10,7 +10,7 @@
 @section('content')
     <section class="section-bg layout-pt-lg layout-pb-lg">
         <div class="section-bg__item col-12">
-            <img src="img/pages/about/1.png" alt="image" />
+            <img src="img/pages/about/1.png" alt="image"/>
         </div>
 
         <div class="container">
@@ -42,13 +42,13 @@
                 <div data-anim-child="slide-up delay-2" class="col-lg-3 col-sm-6">
                     <div class="featureIcon -type-1">
                         <div class="d-flex justify-center">
-                            <img src="#" data-src="img/featureIcons/1/1.svg" alt="image" class="js-lazy" />
+                            <img src="#" data-src="img/featureIcons/1/1.svg" alt="image" class="js-lazy"/>
                         </div>
 
                         <div class="text-center mt-30">
                             <h4 class="text-18 fw-500">Best Price Guarantee</h4>
                             <p class="text-15 mt-10">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                We offer the best Prices you can find anywhere.
                             </p>
                         </div>
                     </div>
@@ -57,13 +57,13 @@
                 <div data-anim-child="slide-up delay-3" class="col-lg-3 col-sm-6">
                     <div class="featureIcon -type-1">
                         <div class="d-flex justify-center">
-                            <img src="#" data-src="img/featureIcons/1/2.svg" alt="image" class="js-lazy" />
+                            <img src="#" data-src="img/featureIcons/1/2.svg" alt="image" class="js-lazy"/>
                         </div>
 
                         <div class="text-center mt-30">
                             <h4 class="text-18 fw-500">Easy & Quick Booking</h4>
                             <p class="text-15 mt-10">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Seamless and smooth Booking Experience.
                             </p>
                         </div>
                     </div>
@@ -72,13 +72,13 @@
                 <div data-anim-child="slide-up delay-4" class="col-lg-3 col-sm-6">
                     <div class="featureIcon -type-1">
                         <div class="d-flex justify-center">
-                            <img src="#" data-src="img/featureIcons/1/3.svg" alt="image" class="js-lazy" />
+                            <img src="#" data-src="img/featureIcons/1/3.svg" alt="image" class="js-lazy"/>
                         </div>
 
                         <div class="text-center mt-30">
                             <h4 class="text-18 fw-500">Customer Care 24/7</h4>
                             <p class="text-15 mt-10">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Have Questions? Don't worry we got you covered 24/7
                             </p>
                         </div>
                     </div>
@@ -98,7 +98,7 @@
                         London is a shining example of a metropolis at the highest peak
                         of modernity and boasts an economy and cultural diversity that’s
                         the envy of other global superpowers.
-                        <br /><br />
+                        <br/><br/>
                         Take the opportunity to acquaint yourself with its fascinating
                         history chronicled by institutions like the British Museum as
                         well as see how far it has come by simply riding the Tube and
@@ -109,7 +109,7 @@
                 </div>
 
                 <div class="col-lg-6">
-                    <img src="img/pages/about/2.png" alt="image" class="rounded-4" />
+                    <img src="img/pages/about/2.png" alt="image" class="rounded-4"/>
                 </div>
             </div>
         </div>
@@ -151,117 +151,67 @@
 
     <section class="layout-pt-lg layout-pb-lg">
         <div class="container">
-            <div class="row y-gap-20 justify-between items-end">
-                <div class="col-auto">
-                    <div class="sectionTitle -md">
+            <div class="row y-gap-20 justify-center text-center">
+                <div class="col-lg-12">
+                    <div class="sectionTitle -md text-align-center">
                         <h2 class="sectionTitle__title">Our Team</h2>
                         <p class="sectionTitle__text mt-5 sm:mt-0">
-                            Lorem ipsum dolor sit amet
+                            Meet the people who make it happen
                         </p>
                     </div>
                 </div>
 
-                <div class="col-auto">
-                    <div class="d-flex x-gap-15 items-center justify-center">
-                        <div class="col-auto">
-                            <button class="d-flex items-center text-24 arrow-left-hover js-team-prev">
-                                <i class="icon icon-arrow-left"></i>
-                            </button>
-                        </div>
+                {{--                <div class="col-auto">--}}
+                {{--                    <div class="d-flex x-gap-15 items-center justify-center">--}}
+                {{--                        <div class="col-auto">--}}
+                {{--                            <button class="d-flex items-center text-24 arrow-left-hover js-team-prev">--}}
+                {{--                                <i class="icon icon-arrow-left"></i>--}}
+                {{--                            </button>--}}
+                {{--                        </div>--}}
 
-                        <div class="col-auto">
-                            <div class="pagination -dots text-border js-team-pag"></div>
-                        </div>
+                {{--                        <div class="col-auto">--}}
+                {{--                            <div class="pagination -dots text-border js-team-pag"></div>--}}
+                {{--                        </div>--}}
 
-                        <div class="col-auto">
-                            <button class="d-flex items-center text-24 arrow-right-hover js-team-next">
-                                <i class="icon icon-arrow-right"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+                {{--                        <div class="col-auto">--}}
+                {{--                            <button class="d-flex items-center text-24 arrow-right-hover js-team-next">--}}
+                {{--                                <i class="icon icon-arrow-right"></i>--}}
+                {{--                            </button>--}}
+                {{--                        </div>--}}
+                {{--                    </div>--}}
+                {{--                </div>--}}
             </div>
 
             <div class="overflow-hidden pt-40 js-section-slider" data-gap="30"
-                data-slider-cols="xl-5 lg-4 md-2 sm-2 base-1" data-nav-prev="js-team-prev" data-pagination="js-team-pag"
-                data-nav-next="js-team-next">
-                <div class="swiper-wrapper">
+                 data-slider-cols="xl-5 lg-4 md-2 sm-2 base-1" data-nav-prev="js-team-prev"
+                 data-pagination="js-team-pag"
+                 data-nav-next="js-team-next">
+                <div class="swiper-wrapper justify-center text-center"
+                >
                     <div class="swiper-slide">
                         <div class="">
-                            <img src="img/team/1.png" alt="image" class="rounded-4 col-12" />
+                            <img src="{{url('https://gtwtravels.com/img/team-1.jpg')}}" alt="image"
+                                 class="rounded-4 col-12"/>
 
                             <div class="mt-10">
-                                <div class="text-18 lh-15 fw-500">Cody Fisher</div>
-                                <div class="text-14 lh-15">Medical Assistant</div>
+                                <div class="text-18 lh-15 fw-500">George Joseph</div>
+                                <div class="text-14 lh-15">CEO</div>
                             </div>
                         </div>
                     </div>
 
                     <div class="swiper-slide">
                         <div class="">
-                            <img src="img/team/2.png" alt="image" class="rounded-4 col-12" />
+                            <img src="{{url('https://gtwtravels.com/img/team-2.jpg')}}" alt="image"
+                                 class="rounded-4 col-12"/>
 
                             <div class="mt-10">
-                                <div class="text-18 lh-15 fw-500">Dianne Russell</div>
-                                <div class="text-14 lh-15">Web Designer</div>
+                                <div class="text-18 lh-15 fw-500">Iheoma Okeke</div>
+                                <div class="text-14 lh-15">Consultant</div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="swiper-slide">
-                        <div class="">
-                            <img src="img/team/3.png" alt="image" class="rounded-4 col-12" />
-
-                            <div class="mt-10">
-                                <div class="text-18 lh-15 fw-500">Jerome Bell</div>
-                                <div class="text-14 lh-15">Marketing Coordinator</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="">
-                            <img src="img/team/4.png" alt="image" class="rounded-4 col-12" />
-
-                            <div class="mt-10">
-                                <div class="text-18 lh-15 fw-500">Theresa Webb</div>
-                                <div class="text-14 lh-15">Nursing Assistant</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="">
-                            <img src="img/team/5.png" alt="image" class="rounded-4 col-12" />
-
-                            <div class="mt-10">
-                                <div class="text-18 lh-15 fw-500">Cameron Williamson</div>
-                                <div class="text-14 lh-15">Dog Trainer</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="">
-                            <img src="img/team/6.png" alt="image" class="rounded-4 col-12" />
-
-                            <div class="mt-10">
-                                <div class="text-18 lh-15 fw-500">Courtney Henry</div>
-                                <div class="text-14 lh-15">Medical Assistant</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="">
-                            <img src="img/team/7.png" alt="image" class="rounded-4 col-12" />
-
-                            <div class="mt-10">
-                                <div class="text-18 lh-15 fw-500">Theresa Williamson</div>
-                                <div class="text-14 lh-15">Web Designer</div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -283,7 +233,7 @@
             </div>
 
             <div class="overflow-hidden pt-80 js-section-slider" data-gap="30"
-                data-slider-cols="xl-3 lg-3 md-2 sm-1 base-1">
+                 data-slider-cols="xl-3 lg-3 md-2 sm-1 base-1">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="testimonials -type-1 bg-white rounded-4 pt-40 pb-30 px-40">
@@ -299,7 +249,7 @@
                             <div class="pt-20 mt-28 border-top-light">
                                 <div class="row x-gap-20 y-gap-20 items-center">
                                     <div class="col-auto">
-                                        <img class="size-60" src="img/avatars/1.png" alt="image" />
+                                        <img class="size-60" src="img/avatars/1.png" alt="image"/>
                                     </div>
 
                                     <div class="col-auto">
@@ -327,7 +277,7 @@
                             <div class="pt-20 mt-28 border-top-light">
                                 <div class="row x-gap-20 y-gap-20 items-center">
                                     <div class="col-auto">
-                                        <img class="size-60" src="img/avatars/1.png" alt="image" />
+                                        <img class="size-60" src="img/avatars/1.png" alt="image"/>
                                     </div>
 
                                     <div class="col-auto">
@@ -355,7 +305,7 @@
                             <div class="pt-20 mt-28 border-top-light">
                                 <div class="row x-gap-20 y-gap-20 items-center">
                                     <div class="col-auto">
-                                        <img class="size-60" src="img/avatars/1.png" alt="image" />
+                                        <img class="size-60" src="img/avatars/1.png" alt="image"/>
                                     </div>
 
                                     <div class="col-auto">
@@ -383,7 +333,7 @@
                             <div class="pt-20 mt-28 border-top-light">
                                 <div class="row x-gap-20 y-gap-20 items-center">
                                     <div class="col-auto">
-                                        <img class="size-60" src="img/avatars/1.png" alt="image" />
+                                        <img class="size-60" src="img/avatars/1.png" alt="image"/>
                                     </div>
 
                                     <div class="col-auto">
@@ -411,7 +361,7 @@
                             <div class="pt-20 mt-28 border-top-light">
                                 <div class="row x-gap-20 y-gap-20 items-center">
                                     <div class="col-auto">
-                                        <img class="size-60" src="img/avatars/1.png" alt="image" />
+                                        <img class="size-60" src="img/avatars/1.png" alt="image"/>
                                     </div>
 
                                     <div class="col-auto">
@@ -458,25 +408,25 @@
                     <div class="row y-gap-30 justify-between items-center">
                         <div class="col-md-auto col-sm-6">
                             <div class="d-flex justify-center">
-                                <img src="img/clients/1.svg" alt="image" />
+                                <img src="img/clients/1.svg" alt="image"/>
                             </div>
                         </div>
 
                         <div class="col-md-auto col-sm-6">
                             <div class="d-flex justify-center">
-                                <img src="img/clients/2.svg" alt="image" />
+                                <img src="img/clients/2.svg" alt="image"/>
                             </div>
                         </div>
 
                         <div class="col-md-auto col-sm-6">
                             <div class="d-flex justify-center">
-                                <img src="img/clients/3.svg" alt="image" />
+                                <img src="img/clients/3.svg" alt="image"/>
                             </div>
                         </div>
 
                         <div class="col-md-auto col-sm-6">
                             <div class="d-flex justify-center">
-                                <img src="img/clients/4.svg" alt="image" />
+                                <img src="img/clients/4.svg" alt="image"/>
                             </div>
                         </div>
                     </div>
