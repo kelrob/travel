@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\BookingEmail;
 use App\Models\Destination;
 use App\Models\Flight;
 use App\Models\StudyAbroadRequest;
@@ -10,6 +11,7 @@ use App\Models\Tour;
 use App\Models\VisaRequest;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\View\View;
 
 class PublicController extends Controller
@@ -29,6 +31,11 @@ class PublicController extends Controller
         if (!$destination) {
             return redirect()->route('404');
         }
+
+        // Send email
+        Mail::to('robertebafua@mail.com')->send(new BookingEmail([
+            'name' => 'Robert',
+        ]));
 
         return view('layouts.destination-details', compact('destination'));
     }
