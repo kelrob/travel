@@ -55,7 +55,7 @@ class PublicController extends Controller
         $totalPaid = '$100'; // Example total paid
 
         // Render the HTML template
-        $html = view('email.booking', compact('name', 'age', 'occupation', 'paidValue', 'date', 'totalPaid'))->render();
+        $html = view('emails.booking', compact('name', 'age', 'occupation', 'paidValue', 'date', 'totalPaid'))->render();
 
         // Send the email
         Mail::send([], [], function (Message $message) use ($html) {
