@@ -54,6 +54,7 @@ class PaymentController extends Controller
         ]);
 
         $payment->load('tour');
+        dd($payment);
 
         // Send Email to George
         if ($payment) {
@@ -73,7 +74,7 @@ class PaymentController extends Controller
             $body = new TextPart($bodyPlainText);
             Mail::raw('Hi, welcome user!', function ($message) use ($body, $payment) {
                 $message->to($payment->email)
-                    ->from('bookings@gtwtravels.com', 'GTWTravels')
+                    ->from('gtwtravels@gmail.com', 'GTWTravels')
                     ->subject('New Payment Received')
                     ->setBody($body);
             });

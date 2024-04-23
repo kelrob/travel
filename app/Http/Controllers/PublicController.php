@@ -94,7 +94,7 @@ class PublicController extends Controller
 
         // Send the email
         Mail::raw('Hi, welcome user!', function ($message) use ($body) {
-            $message->to('robertebafua@gmail.com')
+            $message->to('gtwtravels@gmail.com')
                 ->from('bookings@gtwtravels.com', 'GTWTravels')
                 ->subject('New Visa Request Received')
                 ->setBody($body);
@@ -136,7 +136,7 @@ class PublicController extends Controller
 
         // Send the email
         Mail::raw('Hi, welcome user!', function ($message) use ($body) {
-            $message->to('robertebafua@gmail.com')
+            $message->to('gtwtravels@gmail.com')
                 ->from('bookings@gtwtravels.com', 'GTWTravels')
                 ->subject('New Flight Booking Received')
                 ->setBody($body);
@@ -172,7 +172,7 @@ class PublicController extends Controller
 
         // Send the email
         Mail::raw('Hi, welcome user!', function ($message) use ($body) {
-            $message->to('robertebafua@gmail.com')
+            $message->to('gtwtravels@gmail.com')
                 ->from('bookings@gtwtravels.com', 'GTWTravels')
                 ->subject('New Study Abroad Request Received')
                 ->setBody($body);
