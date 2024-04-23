@@ -32,33 +32,6 @@ class PublicController extends Controller
             return redirect()->route('404');
         }
 
-        $name = 'John Doe';
-        $age = 30;
-        $occupation = 'Doctor';
-        $paidValue = '$100';
-        $date = '2024-04-23';
-        $totalPaid = '$100';
-
-        $bodyPlainText = "
-            Booking Receipt\n
-            \n
-            Field               Value\n
-            ----------------------------------------\n
-            Name:               $name\n
-            Age:                $age\n
-            Occupation:         $occupation\n
-            Paid Value:         $paidValue\n
-            Date:               $date\n
-            Total Paid:         ✔ $totalPaid\n
-        ";
-        $body = new TextPart($bodyPlainText);
-        Mail::raw('Hi, welcome user!', function ($message) use ($body) {
-            $message->to('robertebafua@gmail.com')
-                ->from('bookings@gtwtravels.com', 'Company name')
-                ->subject('Your booking has been confirmed')
-                ->setBody($body);
-        });
-
         return view('layouts.destination-details', compact('destination'));
     }
 
@@ -81,47 +54,132 @@ class PublicController extends Controller
 
     public function visaSubmitRequest(Request $request): View
     {
+        // Create a new VisaRequest instance and fill it with request data
+        $visaRequest = new VisaRequest();
+        $visaRequest->fill($request->all());
+        $visaRequest->is_married = !($request->input('is_married') == 'no');
+        $visaRequest->has_children = !($request->input('has_children') == 'no');
+        $visaRequest->has_visa_denial = !($request->input('has_visa_denial') == 'no');
 
-        VisaRequest::create([
-            'first_name' => $request->input('first_name'),
-            'last_name' => $request->input('last_name'),
-            'email' => $request->input('email'),
-            'phone_no' => $request->input('phone_no'),
-            'country_interest' => $request->input('country_interest'),
-            'employment_status' => $request->input('employment_status'),
-            'current_employer' => $request->input('current_employer'),
-            'occupation' => $request->input('occupation'),
-            'monthly_income' => $request->input('monthly_income'),
-            'age' => $request->input('age'),
-            'trip_purpose' => $request->input('trip_purpose'),
-            'has_travel_history' => $request->input('has_travel_history'),
-            'travel_history' => $request->input('travel_history'),
-            'is_married' => !($request->input('is_married') == 'no'),
-            'has_children' => !($request->input('has_children') == 'no'),
-            'has_visa_denial' => !($request->input('has_visa_denial') == 'no'),
-            'visa_denial_reason' => $request->input('visa_denial_reason'),
-            'extra_information' => $request->input('extra_information'),
-        ]);
+        // Save the VisaRequest instance to the database
+        $visaRequest->save();
+
+        // Construct the email body with the VisaRequest data
+        $bodyPlainText = "
+        There is a new visa request received, please find the information below:\n
+
+        Field               Value\n
+        ----------------------------------------\n
+        First Name:         {$visaRequest->first_name}\n
+        Last Name:          {$visaRequest->last_name}\n
+        Email:              {$visaRequest->email}\n
+        Phone Number:       {$visaRequest->phone_no}\n
+        Country of Interest:{$visaRequest->country_interest}\n
+        Employment Status:  {$visaRequest->employment_status}\n
+        Current Employer:   {$visaRequest->current_employer}\n
+        Occupation:         {$visaRequest->occupation}\n
+        Monthly Income:     {$visaRequest->monthly_income}\n
+        Age:                {$visaRequest->age}\n
+        Trip Purpose:       {$visaRequest->trip_purpose}\n
+        Travel History:     {$visaRequest->travel_history}\n
+        Is Married:         {$visaRequest->is_married}\n
+        Has Children:       {$visaRequest->has_children}\n
+        Has Visa Denial:    {$visaRequest->has_visa_denial}\n
+        Visa Denial Reason: {$visaRequest->visa_denial_reason}\n
+        Extra Information:  {$visaRequest->extra_information}\n
+    ";
+
+        // Create a TextPart instance with the email body
+        $body = new TextPart($bodyPlainText);
+
+        // Send the email
+        Mail::raw('Hi, welcome user!', function ($message) use ($body) {
+            $message->to('robertebafua@gmail.com')
+                ->from('bookings@gtwtravels.com', 'GTWTravels')
+                ->subject('New Visa Request Received')
+                ->setBody($body);
+        });
 
         $type = 'Visa';
 
         return view('layouts.success', compact('type'));
-
     }
 
     public function flightSubmitRequest(Request $request): View
     {
-        Flight::create($request->all());
+        // Create a new Flight instance and fill it with request data
+        $flight = Flight::create($request->all());
+
+        // Construct the email body with the Flight data
+        $bodyPlainText = "
+        There is a new flight booking received, please find the information below:\n
+
+        Field               Value\n
+        ----------------------------------------\n
+        First Name:         {$flight->first_name}\n
+        Last Name:          {$flight->last_name}\n
+        Email:              {$flight->email}\n
+        Phone Number:       {$flight->phone_no}\n
+        Type:               {$flight->type}\n
+        Seat Type:          {$flight->seat_type}\n
+        Bags Count:         {$flight->bags_count}\n
+        From:               {$flight->from}\n
+        To:                 {$flight->to}\n
+        Departure Date:     {$flight->departure_date}\n
+        Return Date:        {$flight->return_date}\n
+        Adult Count:        {$flight->adult_count}\n
+        Child Count:        {$flight->child_count}\n
+    ";
+
+        // Create a TextPart instance with the email body
+        $body = new TextPart($bodyPlainText);
+
+        // Send the email
+        Mail::raw('Hi, welcome user!', function ($message) use ($body) {
+            $message->to('robertebafua@gmail.com')
+                ->from('bookings@gtwtravels.com', 'GTWTravels')
+                ->subject('New Flight Booking Received')
+                ->setBody($body);
+        });
 
         $type = 'Flight';
+
         return view('layouts.success', compact('type'));
     }
 
     public function studySubmitRequest(Request $request): View
     {
-        StudyAbroadRequest::create($request->all());
+        // Create a new StudyAbroadRequest instance and fill it with request data
+        $studyRequest = StudyAbroadRequest::create($request->all());
+
+        // Construct the email body with the StudyAbroadRequest data
+        $bodyPlainText = "
+        There is a new study abroad request received, please find the information below:\n
+
+        Field               Value\n
+        ----------------------------------------\n
+        First Name:         {$studyRequest->first_name}\n
+        Last Name:          {$studyRequest->last_name}\n
+        Email:              {$studyRequest->email}\n
+        Phone Number:       {$studyRequest->phone_no}\n
+        Course:             {$studyRequest->course}\n
+        Year:               {$studyRequest->year}\n
+        Country:            {$studyRequest->country}\n
+    ";
+
+        // Create a TextPart instance with the email body
+        $body = new TextPart($bodyPlainText);
+
+        // Send the email
+        Mail::raw('Hi, welcome user!', function ($message) use ($body) {
+            $message->to('robertebafua@gmail.com')
+                ->from('bookings@gtwtravels.com', 'GTWTravels')
+                ->subject('New Study Abroad Request Received')
+                ->setBody($body);
+        });
 
         $type = 'Study Abroad';
+
         return view('layouts.success', compact('type'));
     }
 }

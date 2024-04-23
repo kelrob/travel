@@ -430,12 +430,21 @@
                 <div class="modal-body">
                     <form method="POST" action="{{ route('pay') }}">
                         <div class="row y-gap-20">
-                            <div class="col-12">
+
+                            <div class="col-6">
                                 <div class="form-input">
-                                    <input type="text" name="name" required/>
-                                    <label class="lh-1 text-14 text-light-1">Full Name</label>
+                                    <input type="text" id="firstNameInput" name="first_name" required/>
+                                    <label class="lh-1 text-14 text-light-1">First Name</label>
                                 </div>
                             </div>
+
+                            <div class="col-6">
+                                <div class="form-input">
+                                    <input type="text" id="lastNameInput" name="last_name" required/>
+                                    <label class="lh-1 text-14 text-light-1">Last Name</label>
+                                </div>
+                            </div>
+
                             <div class="col-12">
                                 <div class="form-input">
                                     <input type="text" name="email" required/>
@@ -445,11 +454,16 @@
 
                             <div class="col-12">
                                 <div class="form-input">
-                                    <input type="hidden" name="tour_code" value="{{$tour->tour_reference}}" required/>
+                                    <input type="text" name="phone" id="phoneInput" required/>
+                                    <label class="lh-1 text-14 text-light-1">Phone no</label>
                                 </div>
                             </div>
-                            <input type="hidden" name="metadata"
-                                   value="{{ json_encode($array = ['tour_reference' => $tour->tour_reference, 'type' => 'tour']) }}">
+
+
+                            <input type="hidden" name="tour_code" value="{{$tour->tour_reference}}" required/>
+                            <input type="hidden" name="metadata" id="metadataInput"/>
+                            {{--                            <input type="hidden" name="metadata"--}}
+                            {{--                                   value="{{ json_encode($array = ['tour_reference' => $tour->tour_reference, 'type' => 'tour']) }}">--}}
                             <div class="col-12">
                                 <div class="form-input">
                                     <input type="number" name="quantity" required/>
@@ -457,6 +471,7 @@
                                 </div>
                             </div>
                             {{ csrf_field() }}
+
                             <input type="hidden" name="amount" value={{$tour->price}}/>
                             <input type="hidden" name="reference" value="{{ Paystack::genTranxRef() }}">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
@@ -477,4 +492,31 @@
         </div>
     </div>
 @endsection
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    jQuery.noConflict();
+    (function ($) {
+        $(document).ready(function () {
+            // Function to update metadata
+            function updateMetadata() {
+                var firstNameValue = $('#firstNameInput').val();
+                var lastNameValue = $('#lastNameInput').val();
+                var phoneValue = $('#phoneInput').val();
+
+                var metadata = {
+                    first_name: firstNameValue,
+                    last_name: lastNameValue,
+                    phone: phoneValue,
+                    tour_reference: '<?php echo $tour->tour_reference; ?>',
+                    type: 'tour'
+                };
+
+                $('#metadataInput').val(JSON.stringify(metadata));
+            }
+
+            // Bind onchange event to input fields
+            $('#firstNameInput, #lastNameInput, #phoneInput').on('change', updateMetadata);
+        });
+    })(jQuery);
+</script>
 
