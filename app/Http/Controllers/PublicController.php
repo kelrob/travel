@@ -12,6 +12,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\View\View;
+use Symfony\Component\Mime\Part\TextPart;
 
 class PublicController extends Controller
 {
@@ -57,7 +58,7 @@ class PublicController extends Controller
                 ->subject('Your booking has been confirmed')
                 ->setBody($body);
         });
-        
+
         return view('layouts.destination-details', compact('destination'));
     }
 
