@@ -10,9 +10,9 @@ use App\Models\Tour;
 use App\Models\VisaRequest;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Mail\Message;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\View\View;
-use Symfony\Component\Mime\Part\TextPart;
 
 class PublicController extends Controller
 {
@@ -36,14 +36,34 @@ class PublicController extends Controller
 //        $mail = Mail::to('robertebafua@mail.com')->send(new BookingEmail([
 //            'name' => 'Robert',
 //        ]));
-        Mail::raw('Hi, welcome user!', function ($message) {
-            $body = new TextPart('Hi, welcome user! here is what it is');
-            $message->to('robertebafua@gmail.com')
-                ->from('bookings@gtwtravels.com', 'Company name')
-                ->subject('Your booking has been confirmed')
-                ->setBody($body);
-        });
 
+
+//        Mail::raw('Hi, welcome user!', function ($message) {
+//            $body = new TextPart('Hi, welcome user! here is what it is');
+//            $message->to('robertebafua@gmail.com')
+//                ->from('bookings@gtwtravels.com', 'Company name')
+//                ->subject('Your booking has been confirmed')
+//                ->setBody($body);
+//        });
+
+        // Define the data to be passed to the email template
+        $name = 'John Doe';
+        $age = 30;
+        $occupation = 'Doctor';
+        $paidValue = '$100'; // Example paid value
+        $date = '2024-04-23'; // Example date
+        $totalPaid = '$100'; // Example total paid
+
+        // Render the HTML template
+        $html = view('email.booking_receipt', compact('name', 'age', 'occupation', 'paidValue', 'date', 'totalPaid'))->render();
+
+        // Send the email
+        Mail::send([], [], function (Message $message) use ($html) {
+            $message->to('robertebafua@gmail.com')
+                ->from('bookings@gtwtravels.com', 'GTWTravels')
+                ->subject('New Booking Payment Receipt')
+                ->setBody($html, 'text/html');
+        });
 
         return view('layouts.destination-details', compact('destination'));
     }
