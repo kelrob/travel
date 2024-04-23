@@ -12,6 +12,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\View\View;
+use Symfony\Component\Mime\Part\TextPart;
 
 class PublicController extends Controller
 {
@@ -36,13 +37,14 @@ class PublicController extends Controller
 //            'name' => 'Robert',
 //        ]));
         Mail::raw([], function ($message) {
+            $body = new TextPart('Hi, welcome user! here is what it is');
             $message->from('bookings@gtwtravels.com', 'Company name');
             $message->to('robertebafua@gmail.com');
             $message->subject('Your booking has been confirmed');
-            $message->setBody('Hi, welcome user! here is what it is');
+            $message->setBody($body);
             $message->addPart("testing  its awesome\n\nGo get it now!", 'text/plain');
         });
-        
+
         return view('layouts.destination-details', compact('destination'));
     }
 
