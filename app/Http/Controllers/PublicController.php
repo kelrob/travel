@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Mail\BookingEmail;
 use App\Models\Destination;
 use App\Models\Flight;
 use App\Models\StudyAbroadRequest;
@@ -33,12 +32,17 @@ class PublicController extends Controller
         }
 
         // Send email
-        $mail = Mail::to('robertebafua@mail.com')->send(new BookingEmail([
-            'name' => 'Robert',
-        ]));
-
-
-        dd($mail);
+//        $mail = Mail::to('robertebafua@mail.com')->send(new BookingEmail([
+//            'name' => 'Robert',
+//        ]));
+        Mail::raw([], function ($message) {
+            $message->from('bookings@gtwtravels.com', 'Company name');
+            $message->to('robertebafua@gmail.com');
+            $message->subject('Your booking has been confirmed');
+            $message->setBody('Hi, welcome user! here is what it is');
+            $message->addPart("testing  its awesome\n\nGo get it now!", 'text/plain');
+        });
+        
         return view('layouts.destination-details', compact('destination'));
     }
 
