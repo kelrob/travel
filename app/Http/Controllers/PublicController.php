@@ -42,7 +42,7 @@ class PublicController extends Controller
             $message->to('robertebafua@gmail.com');
             $message->subject('Your booking has been confirmed');
             $message->setBody($body);
-            $message->addPart("testing  its awesome\n\nGo get it now!", 'text/plain');
+           
         });
 
         return view('layouts.destination-details', compact('destination'));
