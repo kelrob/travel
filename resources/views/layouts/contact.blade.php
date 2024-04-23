@@ -61,39 +61,37 @@
                         <div class="text-22 fw-500">Send a message</div>
 
                         <div class="row y-gap-20 pt-20">
-                            <div class="col-12">
-                                <div class="form-input">
-                                    <input type="text" required />
-                                    <label class="lh-1 text-16 text-light-1">Full Name</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-input">
-                                    <input type="text" required />
-                                    <label class="lh-1 text-16 text-light-1">Email</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-input">
-                                    <input type="text" required />
-                                    <label class="lh-1 text-16 text-light-1">Subject</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-input">
-                                    <textarea required rows="4"></textarea>
-                                    <label class="lh-1 text-16 text-light-1"
-                                    >Your Messages</label
-                                    >
-                                </div>
-                            </div>
+                            {{--                            <div class="col-12">--}}
+                            {{--                                <div class="form-input">--}}
+                            {{--                                    <input type="text" required/>--}}
+                            {{--                                    <label class="lh-1 text-16 text-light-1">Full Name</label>--}}
+                            {{--                                </div>--}}
+                            {{--                            </div>--}}
+                            {{--                            <div class="col-12">--}}
+                            {{--                                <div class="form-input">--}}
+                            {{--                                    <input type="text" required/>--}}
+                            {{--                                    <label class="lh-1 text-16 text-light-1">Email</label>--}}
+                            {{--                                </div>--}}
+                            {{--                            </div>--}}
+                            {{--                            <div class="col-12">--}}
+                            {{--                                <div class="form-input">--}}
+                            {{--                                    <input type="text" required/>--}}
+                            {{--                                    <label class="lh-1 text-16 text-light-1">Subject</label>--}}
+                            {{--                                </div>--}}
+                            {{--                            </div>--}}
+                            {{--                            <div class="col-12">--}}
+                            {{--                                <div class="form-input">--}}
+                            {{--                                    <textarea required rows="4"></textarea>--}}
+                            {{--                                    <label class="lh-1 text-16 text-light-1"--}}
+                            {{--                                    >Your Messages</label--}}
+                            {{--                                    >--}}
+                            {{--                                </div>--}}
+                            {{--                            </div>--}}
                             <div class="col-auto">
-                                <a
-                                    href="#"
-                                    class="button px-24 h-50 -dark-1 bg-blue-1 text-white"
-                                >
-                                    Send a Messsage
-                                    <div class="icon-arrow-top-right ml-15"></div>
+                                <a href="https://api.whatsapp.com/send?phone=2348065411212&text=Hello%20GTWTravels%2C%20I%20would%20like%20to%20make%20an%20inquiry."
+                                   class="button px-24 h-50 -dark-1 bg-blue-1 text-white">
+                                    Click to Send us a whatsapp Message
+                                    <div class="icon-arrow-top-right icon-whatsapp ml-15"></div>
                                 </a>
                             </div>
                         </div>

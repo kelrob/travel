@@ -54,7 +54,6 @@ class PaymentController extends Controller
         ]);
 
         $payment->load('tour');
-        dd($payment);
 
         // Send Email to George
         if ($payment) {
