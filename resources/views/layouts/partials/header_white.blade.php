@@ -4,7 +4,8 @@
         <div class="row justify-between items-center">
             <div class="col-auto">
                 <div class="d-flex items-center">
-                    <a href="{{@route('/')}}" class="header-logo mr-20" data-x="header-logo" data-x-toggle="is-logo-dark">
+                    <a href="{{@route('/')}}" class="header-logo mr-20" data-x="header-logo"
+                       data-x-toggle="is-logo-dark">
                         <h3 class="text-dark-1">GTWTravels</h3>
                     </a>
 
@@ -28,6 +29,10 @@
 
                                     <li>
                                         <a href="{{@route('destinations')}}"> Destinations </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="{{@route('success-stories')}}"> Success Stories </a>
                                     </li>
 
                                     <li class="menu-item-has-children">
@@ -74,7 +79,7 @@
 
                         <div class="col-auto">
                             <button class="d-flex items-center text-14 text-dark-1" data-x-click="lang">
-                                <img src="img/general/lang.png" alt="image" class="rounded-full mr-10" />
+                                <img src="img/general/lang.png" alt="image" class="rounded-full mr-10"/>
                                 <span class="js-language-mainTitle">United Kingdom</span>
                                 <i class="icon-chevron-sm-down text-7 ml-15"></i>
                             </button>
@@ -83,14 +88,14 @@
 
                     <div class="d-flex items-center ml-20 is-menu-opened-hide md:d-none">
                         <a href="{{@route('contact')}}"
-                            class="button px-30 fw-400 text-14 -blue-1 bg-blue-1 h-50 text-white">Consultations</a>
+                           class="button px-30 fw-400 text-14 -blue-1 bg-blue-1 h-50 text-white">Consultations</a>
                     </div>
 
                     <div class="d-none xl:d-flex x-gap-20 items-center pl-30" data-x="header-mobile-icons"
-                        data-x-toggle="text-white">
+                         data-x-toggle="text-white">
                         <div>
                             <button class="d-flex items-center icon-menu text-20"
-                                data-x-click="html, header, header-logo, header-mobile-icons, mobile-menu"></button>
+                                    data-x-click="html, header, header-logo, header-mobile-icons, mobile-menu"></button>
                         </div>
                     </div>
                 </div>

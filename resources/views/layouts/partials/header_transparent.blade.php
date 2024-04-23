@@ -1,5 +1,5 @@
 <header
-   style="background-color: rgba(0,0,0,0.5)"
+    style="background-color: rgba(0,0,0,0.5)"
     class="header bg-green js-header"
     data-x="header"
     data-x-toggle="is-menu-opened"
@@ -14,8 +14,8 @@
                         data-x="header-logo"
                         data-x-toggle="is-logo-dark"
                     >
-{{--                         <h3 class="text-white">GTWTravels</h3>--}}
-                        <img src="{{asset('img/gtw-logo.png')}}" alt="logo icon" />
+                        {{--                         <h3 class="text-white">GTWTravels</h3>--}}
+                        <img src="{{asset('img/gtw-logo.png')}}" alt="logo icon"/>
                         <!--
                         <img src="img/general/logo-dark.svg" alt="logo icon" /> -->
                     </a>
@@ -46,6 +46,10 @@
 
                                     <li>
                                         <a href="{{@route('destinations')}}"> Destinations </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="{{@route('success-stories')}}"> Success Stories </a>
                                     </li>
 
                                     <li class="menu-item-has-children">

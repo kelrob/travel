@@ -246,6 +246,18 @@
                         </div>
                     </div>
 
+                    <div class="swiper-slide">
+                        <div class="">
+                            <img src="{{url('https://gtwtravels.com/img/team-3.jpg')}}" alt="image"
+                                 class="rounded-4 col-12"/>
+
+                            <div class="mt-10">
+                                <div class="text-18 lh-15 fw-500">Shobayo Oluwafunmilayo Elizabeth</div>
+                                <div class="text-14 lh-15">Project Coordinator</div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>

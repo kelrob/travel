@@ -45,7 +45,9 @@
                                     <li>
                                         <a href="{{@route('destinations')}}"> Destinations </a>
                                     </li>
-
+                                    <li>
+                                        <a href="{{@route('success-stories')}}"> Success Stories </a>
+                                    </li>
                                     <li class="menu-item-has-children">
                                         <a href="#">
                                             <span class="mr-10">Services</span>
