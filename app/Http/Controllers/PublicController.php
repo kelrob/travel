@@ -33,10 +33,12 @@ class PublicController extends Controller
         }
 
         // Send email
-        Mail::to('robertebafua@mail.com')->send(new BookingEmail([
+        $mail = Mail::to('robertebafua@mail.com')->send(new BookingEmail([
             'name' => 'Robert',
         ]));
 
+
+        dd($mail);
         return view('layouts.destination-details', compact('destination'));
     }
 
