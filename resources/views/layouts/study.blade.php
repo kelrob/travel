@@ -11,7 +11,7 @@
     <section class="section-bg layout-pt-lg layout-pb-lg">
         <div class="section-bg__item col-12">
             <img
-                src="https://images.pexels.com/photos/1251861/pexels-photo-1251861.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                src="https://s3-us-west-2.amazonaws.com/courses-images-archive-read-only/wp-content/uploads/sites/1110/2016/03/16214526/3618969705_9e34ea2ac3_o-1024x667.jpg"
                 alt="image"/>
         </div>
 

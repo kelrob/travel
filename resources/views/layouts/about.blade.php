@@ -228,7 +228,7 @@
                                  class="rounded-4 col-12"/>
 
                             <div class="mt-10">
-                                <div class="text-18 lh-15 fw-500">George Joseph</div>
+                                <div class="text-18 lh-15 fw-500">George Ode Joseph</div>
                                 <div class="text-14 lh-15">CEO</div>
                             </div>
                         </div>
@@ -240,7 +240,7 @@
                                  class="rounded-4 col-12"/>
 
                             <div class="mt-10">
-                                <div class="text-18 lh-15 fw-500">Iheoma Okeke</div>
+                                <div class="text-18 lh-15 fw-500">Favour Ihuoma Okeke</div>
                                 <div class="text-14 lh-15">Consultant</div>
                             </div>
                         </div>

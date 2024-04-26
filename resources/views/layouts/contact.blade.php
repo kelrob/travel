@@ -88,7 +88,7 @@
                             {{--                                </div>--}}
                             {{--                            </div>--}}
                             <div class="col-auto">
-                                <a href="https://api.whatsapp.com/send?phone=2348065411212&text=Hello%20GTWTravels%2C%20I%20would%20like%20to%20make%20an%20inquiry."
+                                <a href="https://api.whatsapp.com/send?phone=2348110487425&text=Hello%20GTWTravels%2C%20I%20would%20like%20to%20make%20an%20inquiry."
                                    class="button px-24 h-50 -dark-1 bg-blue-1 text-white">
                                     Click to Send us a whatsapp Message
                                     <div class="icon-arrow-top-right icon-whatsapp ml-15"></div>

@@ -481,7 +481,7 @@
                                         class="button px-24 h-50 -dark-1 bg-blue-1 text-white"
 
                                 >
-                                    Book Ticket
+                                    Book Tour
                                 </button>
                             </div>
                         </div>

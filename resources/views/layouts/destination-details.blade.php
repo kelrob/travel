@@ -46,7 +46,7 @@
                         />
 
                         <div class="absolute z-2 px-50 py-60">
-                            <h1 class="text-50 fw-600 text-white">Explore London</h1>
+                            <h1 class="text-50 fw-600 text-white">Explore {{$destination->name}}</h1>
                             <div class="text-white">
                                 Explore deals, travel guides and things to do in London
                             </div>

@@ -106,7 +106,7 @@
                                             <p class="text-14 lh-14 mt-5">{{$tour->location}}</p>
 
                                             {{--                                            <div class="text-14 lh-15 fw-500 mt-20">Taking safety measures</div>--}}
-                                            <div class="text-14 text-green-2 fw-500 lh-15 mt-5">Free cancellation</div>
+                                            {{--                                            <div class="text-14 text-green-2 fw-500 lh-15 mt-5">Free cancellation</div>--}}
                                         </div>
 
                                         <div class="col-md-auto text-right md:text-left">

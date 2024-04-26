@@ -63,43 +63,7 @@
                 </div>
             </div>
 
-            <div class="col-auto">
-                <div class="d-flex items-center">
-                    <div class="row x-gap-20 items-center xxl:d-none">
-                        <div class="col-auto">
-                            <button class="d-flex items-center text-14 text-dark-1" data-x-click="currency">
-                                <span class="js-currencyMenu-mainTitle">USD</span>
-                                <i class="icon-chevron-sm-down text-7 ml-10"></i>
-                            </button>
-                        </div>
-
-                        <div class="col-auto">
-                            <div class="w-1 h-20 bg-black-20"></div>
-                        </div>
-
-                        <div class="col-auto">
-                            <button class="d-flex items-center text-14 text-dark-1" data-x-click="lang">
-                                <img src="img/general/lang.png" alt="image" class="rounded-full mr-10"/>
-                                <span class="js-language-mainTitle">United Kingdom</span>
-                                <i class="icon-chevron-sm-down text-7 ml-15"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="d-flex items-center ml-20 is-menu-opened-hide md:d-none">
-                        <a href="{{@route('contact')}}"
-                           class="button px-30 fw-400 text-14 -blue-1 bg-blue-1 h-50 text-white">Consultations</a>
-                    </div>
-
-                    <div class="d-none xl:d-flex x-gap-20 items-center pl-30" data-x="header-mobile-icons"
-                         data-x-toggle="text-white">
-                        <div>
-                            <button class="d-flex items-center icon-menu text-20"
-                                    data-x-click="html, header, header-logo, header-mobile-icons, mobile-menu"></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
         </div>
     </div>
 </header>
