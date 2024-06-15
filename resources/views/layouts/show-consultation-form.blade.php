@@ -1,7 +1,7 @@
 @extends('app')
 @include('layouts.partials.head')
 
-@section('title', 'GTWTravels - About')
+@section('title', 'GTWTravels - Consultation Form')
 
 @section('header')
     @include('layouts.partials.header_white')
