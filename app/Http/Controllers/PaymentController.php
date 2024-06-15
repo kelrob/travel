@@ -63,7 +63,7 @@ class PaymentController extends Controller
             $body = new TextPart($bodyPlainText);
             Mail::raw('Hi, welcome user!', function ($message) use ($body) {
                 $message->to('robertebafua@gmail.com')
-                    ->from('gtwtravels@gmail.com', 'GTWTravels')
+                    ->from('bookings@gtwtravels.com', 'GTWTravels')
                     ->subject('New Payment Received')
                     ->setBody($body);
             });
@@ -114,7 +114,7 @@ class PaymentController extends Controller
                 $body = new TextPart($bodyPlainText);
                 Mail::raw('Hi, welcome user!', function ($message) use ($body, $payment) {
                     $message->to('gtwtravels@gmail.com')
-                        ->from('gtwtravels@gmail.com', 'GTWTravels')
+                        ->from('bookings@gtwtravels.com', 'GTWTravels')
                         ->subject('New Payment Received')
                         ->setBody($body);
                 });
