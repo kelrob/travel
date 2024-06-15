@@ -45,7 +45,7 @@
     <section class="layout-pb-lg">
         <div class="container">
             <div class="row y-gap-30 pt-60 lg:pt-40">
-                <div class="col-lg-6 col-md-6">
+                <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="bg-blue-1-05 rounded-4 px-50 py-40">
                         <div class="size-70 bg-white rounded-full flex-center">
                             <img src="img/pages/help/icons/6.svg" alt="icon">
@@ -62,7 +62,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-6 col-md-6">
+                <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="bg-blue-1-05 rounded-4 px-50 py-40">
                         <div class="size-70 bg-white rounded-full flex-center">
                             <img src="img/pages/help/icons/1.svg" alt="icon">

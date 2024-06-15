@@ -110,7 +110,8 @@
 
                     <div class="d-none xl:d-flex x-gap-20 items-center pl-30 text-white" data-x="header-mobile-icons"
                          data-x-toggle="text-white">
-                        <a href="#" class="button px-30 fw-400 text-14 -white bg-white h-50 text-dark-1">Book a
+                        <a href="{{@route('consultation')}}"
+                           class="button px-30 fw-400 text-14 -white bg-white h-50 text-dark-1">Book a
                             Consultation</a>
                         <div>
                             <button class="d-flex items-center icon-menu text-inherit text-20"
