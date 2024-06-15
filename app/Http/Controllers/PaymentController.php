@@ -67,7 +67,7 @@ class PaymentController extends Controller
                     ->subject('New Payment Received')
                     ->setBody($body);
             });
-            return view('layouts.success');
+            return view('layouts.success', compact('consultation'));
 
         } else {
             $tourReference = $paymentDetails['data']['metadata']['tour_reference'];
