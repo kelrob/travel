@@ -52,12 +52,13 @@ class PaymentController extends Controller
 
             Field               Value\n
             ----------------------------------------\n
-            Name:              $consultation->name\n
-            Phone number:      $consultation->phone_no\n
-            Reference:         $paymentReference\n
-            Payment for:       Consultation\n
-            Date:              $paymentDate\n
-            Total Paid:         ✔ $amount\n
+            Name:                   $consultation->name\n
+            Phone number:           $consultation->phone_no\n
+            Reference:              $paymentReference\n
+            Payment for:            Consultation\n
+            Appointment Date:       $consultation->appointment_date\n
+            Payment Date:           $paymentDate\n
+            Total Paid:             ✔ $amount\n
             Please check the paystack to see payment
         ";
             $body = new TextPart($bodyPlainText);
