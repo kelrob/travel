@@ -51,7 +51,7 @@
                         class="px-50 py-50 sm:px-20 sm:py-20 bg-white shadow-4 rounded-4"
                     >
                         <div class="row y-gap-20">
-                            <div class="col-6">
+                            <div class="col-lg-6 col-sm-12">
                                 <div class="form-input">
                                     <input type="text" name="first_name" required/>
                                     <label class="lh-1 text-14 text-light-1"
@@ -60,21 +60,21 @@
                                 </div>
                             </div>
 
-                            <div class="col-6">
+                            <div class="col-lg-6 col-sm-12">
                                 <div class="form-input">
                                     <input type="text" name="last_name" required/>
                                     <label class="lh-1 text-14 text-light-1">Last Name</label>
                                 </div>
                             </div>
 
-                            <div class="col-6">
+                            <div class="col-lg-6 col-sm-12">
                                 <div class="form-input">
                                     <input type="text" name="email" required/>
                                     <label class="lh-1 text-14 text-light-1">Email</label>
                                 </div>
                             </div>
 
-                            <div class="col-6">
+                            <div class="col-lg-6 col-sm-12">
                                 <div class="form-input">
                                     <input type="text" name="phone_no" required/>
                                     <label class="lh-1 text-14 text-light-1"
@@ -83,7 +83,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-6">
+                            <div class="col-lg-6 col-sm-12">
                                 <div class="form-input">
                                     <input type="text" name="address" required/>
                                     <label class="lh-1 text-14 text-light-1"
@@ -92,7 +92,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-6">
+                            <div class="col-lg-6 col-sm-12">
                                 <div class="form-input">
                                     <input type="text" name="destination" required/>
                                     <label class="lh-1 text-14 text-light-1"
