@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Consultation;
 use App\Models\Payment;
 use App\Models\Tour;
 use Exception;
@@ -29,35 +30,75 @@ class PaymentController extends Controller
 
         $paymentDetails = (new Paystack)->getPaymentData();
 
-        $tourReference = $paymentDetails['data']['metadata']['tour_reference'];
-        $paymentReference = $paymentDetails['data']['reference'];
-        $tour = Tour::where('tour_reference', $tourReference)->first();
-        $paymentExists = Payment::where('reference', $paymentReference)->first();
-        $amount = $paymentDetails['data']['amount'] / 100;
+        if ($paymentDetails['data']['metadata']['type'] == 'consultation') {
+            $consultation_id = $paymentDetails['data']['metadata']['consultation_id'];
+            $email = $paymentDetails['data']['customer']['email'];
+            $amount = $paymentDetails['data']['amount'];
+            $paymentReference = $paymentDetails['data']['reference'];
+            $paymentDate = $paymentDetails['data']['paid_at'];
 
-        if (!$tour || $paymentDetails['data']['amount'] < $tour->price || $paymentExists) {
-            return Redirect::route('404');
-        }
+            $consultation = Consultation::where('id', $consultation_id)
+                ->where('email', $email)
+                ->first();
 
+            if ($amount != 2000000 || $consultation == null) {
+                return Redirect::route('404');
+            }
 
-        $payment = Payment::with(['tour' => function ($query) {
-            $query->select('id', 'title');
-        }])->create([
-            'reference' => $paymentReference,
-            'phone_no' => $paymentDetails['data']['metadata']['phone'],
-            'name' => $paymentDetails['data']['metadata']['first_name'] . ' ' . $paymentDetails['data']['metadata']['last_name'],
-            'email' => $paymentDetails['data']['customer']['email'],
-            'type' => $paymentDetails['data']['metadata']['type'],
-            'tour_id' => $tour->id,
-            'amount' => $paymentDetails['data']['amount'],
-            'ticket_no' => $paymentDetails['data']['amount'] / $tour->price
-        ]);
-
-        $payment->load('tour');
-
-        // Send Email to George
-        if ($payment) {
+            Consultation::where('id', $consultation_id)
+                ->update(['paid' => true]);
             $bodyPlainText = "
+            There is a new payment received, please find the information below:\n
+
+            Field               Value\n
+            ----------------------------------------\n
+            Name:              $consultation->name\n
+            Phone number:      $consultation->phone_no\n
+            Reference:         $paymentReference\n
+            Payment for:       Consultation\n
+            Date:              $paymentDate\n
+            Total Paid:         ✔ $amount\n
+            Please check the paystack to see payment
+        ";
+            $body = new TextPart($bodyPlainText);
+            Mail::raw('Hi, welcome user!', function ($message) use ($body) {
+                $message->to('robertebafua@gmail.com')
+                    ->from('gtwtravels@gmail.com', 'GTWTravels')
+                    ->subject('New Payment Received')
+                    ->setBody($body);
+            });
+            return view('layouts.success');
+
+        } else {
+            $tourReference = $paymentDetails['data']['metadata']['tour_reference'];
+            $paymentReference = $paymentDetails['data']['reference'];
+            $tour = Tour::where('tour_reference', $tourReference)->first();
+            $paymentExists = Payment::where('reference', $paymentReference)->first();
+            $amount = $paymentDetails['data']['amount'] / 100;
+
+            if (!$tour || $paymentDetails['data']['amount'] < $tour->price || $paymentExists) {
+                return Redirect::route('404');
+            }
+
+
+            $payment = Payment::with(['tour' => function ($query) {
+                $query->select('id', 'title');
+            }])->create([
+                'reference' => $paymentReference,
+                'phone_no' => $paymentDetails['data']['metadata']['phone'],
+                'name' => $paymentDetails['data']['metadata']['first_name'] . ' ' . $paymentDetails['data']['metadata']['last_name'],
+                'email' => $paymentDetails['data']['customer']['email'],
+                'type' => $paymentDetails['data']['metadata']['type'],
+                'tour_id' => $tour->id,
+                'amount' => $paymentDetails['data']['amount'],
+                'ticket_no' => $paymentDetails['data']['amount'] / $tour->price
+            ]);
+
+            $payment->load('tour');
+
+            // Send Email to George
+            if ($payment) {
+                $bodyPlainText = "
             There is a new payment received, please find the information below:\n
 
             Field               Value\n
@@ -70,15 +111,17 @@ class PaymentController extends Controller
             Total Paid:         ✔ $amount\n
             Please check the paystack to see payment
         ";
-            $body = new TextPart($bodyPlainText);
-            Mail::raw('Hi, welcome user!', function ($message) use ($body, $payment) {
-                $message->to($payment->email)
-                    ->from('gtwtravels@gmail.com', 'GTWTravels')
-                    ->subject('New Payment Received')
-                    ->setBody($body);
-            });
-            return view('layouts.receipt', compact('payment'));
+                $body = new TextPart($bodyPlainText);
+                Mail::raw('Hi, welcome user!', function ($message) use ($body, $payment) {
+                    $message->to('gtwtravels@gmail.com')
+                        ->from('gtwtravels@gmail.com', 'GTWTravels')
+                        ->subject('New Payment Received')
+                        ->setBody($body);
+                });
+                return view('layouts.receipt', compact('payment'));
+            }
+            return Redirect::route('404');
         }
-        return Redirect::route('404');
+
     }
 }

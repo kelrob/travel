@@ -31,6 +31,8 @@ Route::view('/receipts', 'layouts.receipt')->name('receipt');
 Route::view('/visa-get-started', 'layouts.visa.get-started')->name('visa-get-started');
 Route::view('/success', 'layouts.success')->name('success');
 Route::view('/success-stories', 'layouts.testimonials')->name('success-stories');
+Route::view('/consultation', 'layouts.consultation')->name('consultation');
+Route::view('/consultation-form', 'layouts.show-consultation-form')->name('consultation-form');
 Route::get('/destination-details/{id}/{slug}', [PublicController::class, 'showDestinationDetails'])->name('destination-info');
 
 // Dynamic routes
@@ -51,3 +53,6 @@ Route::post('/newsletter/subscribe', [NewsletterController::class, 'subscribe'])
 Route::post('/visa/submit/request', [PublicController::class, 'visaSubmitRequest'])->name('visa.submit.request');
 Route::post('/flight/submit/request', [PublicController::class, 'flightSubmitRequest'])->name('flight.submit.request');
 Route::post('/study/submit/request', [PublicController::class, 'studySubmitRequest'])->name('study.submit.request');
+
+// Consultations
+Route::post('/consultation/submit', [PublicController::class, 'consultationFormSubmit'])->name('consultation.submit');

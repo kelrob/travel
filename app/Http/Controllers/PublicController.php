@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Consultation;
 use App\Models\Destination;
 use App\Models\Flight;
 use App\Models\StudyAbroadRequest;
@@ -181,5 +182,16 @@ class PublicController extends Controller
         $type = 'Study Abroad';
 
         return view('layouts.success', compact('type'));
+    }
+
+    public function consultationFormSubmit(Request $request): View|RedirectResponse
+    {
+        $consultation = Consultation::create($request->all());
+
+        if ($consultation) {
+            return view('layouts.consultation-payment', compact('consultation'));
+        }
+
+        return redirect()->route('404');
     }
 }
