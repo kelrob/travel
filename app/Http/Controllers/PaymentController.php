@@ -45,6 +45,8 @@ class PaymentController extends Controller
                 return Redirect::route('404');
             }
 
+            $amountInNaira = $amount / 100;
+
             Consultation::where('id', $consultation_id)
                 ->update(['paid' => true]);
             $bodyPlainText = "
@@ -56,9 +58,12 @@ class PaymentController extends Controller
             Phone number:           $consultation->phone_no\n
             Reference:              $paymentReference\n
             Payment for:            Consultation\n
+            Destination:            $consultation->destination\n
+            Client Address:         $consultation->address\n
+            Clarification Needed:   $consultation->clarification_needed\n
             Appointment Date:       $consultation->appointment_date\n
             Payment Date:           $paymentDate\n
-            Total Paid:             ✔ $amount\n
+            Total Paid:             ✔ $amountInNaira \n
             Please check the paystack to see payment
         ";
             $body = new TextPart($bodyPlainText);
