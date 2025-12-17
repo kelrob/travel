@@ -95,7 +95,7 @@
                     <p class="mt-5">These popular destinations have a lot to offer</p>
 
                     <p class="text-dark-1 mt-60 lg:mt-40 md:mt-10">
-                        Great Travel World Travel aims to be the ultimate companion for travelers worldwide,
+                        Great Trust World Travel aims to be the ultimate companion for travelers worldwide,
                         facilitating seamless and enjoyable travel experiences for every individual. The brand prides
                         itself on its commitment to excellence, reliability, and personalized service
                         <br/><br/></p>
@@ -110,7 +110,7 @@
 
                     <h3>Target Audience</h3>
                     <p>
-                        Great Travel World Travel caters to a diverse clientele ranging from seasoned globetrotters
+                        Great Trust World Travel caters to a diverse clientele ranging from seasoned globetrotters
                         seeking unique adventures to first-time travelers embarking on their dream vacations. Our
                         services are tailored to meet the needs of solo travelers, families, couples, and groups alike,
                         ensuring that each customer receives personalized attention and assistance.
@@ -123,7 +123,7 @@
                             expectations at every touchpoint.
                         </li>
                         <li>
-                            <b>Reliability</b>: Customers can trust Great Travel World Travel to handle every aspect of
+                            <b>Reliability</b>: Customers can trust Great Trust World Travel to handle every aspect of
                             their
                             travel arrangements with professionalism, efficiency, and attention to detail.
                         </li>
@@ -131,7 +131,7 @@
                             <b>Personalization</b>: We understand that every traveler is unique, which is why we offer
                             customized solutions to suit individual preferences, budgets, and interests.
                         </li>
-                        <li><b>Community</b>: Great Travel World Travel fosters a sense of community among travelers,
+                        <li><b>Community</b>: Great Trust World Travel fosters a sense of community among travelers,
                             encouraging connections, cultural exchange, and shared experiences.
                         </li>
                         <li>
