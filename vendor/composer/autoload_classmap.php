@@ -23,6 +23,7 @@ return array(
     'App\\Http\\Middleware\\ValidateSignature' => $baseDir . '/app/Http/Middleware/ValidateSignature.php',
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
     'App\\Mail\\BookingEmail' => $baseDir . '/app/Mail/BookingEmail.php',
+    'App\\Models\\Consultation' => $baseDir . '/app/Models/Consultation.php',
     'App\\Models\\Destination' => $baseDir . '/app/Models/Destination.php',
     'App\\Models\\Flight' => $baseDir . '/app/Models/Flight.php',
     'App\\Models\\Payment' => $baseDir . '/app/Models/Payment.php',

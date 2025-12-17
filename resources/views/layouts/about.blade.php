@@ -101,7 +101,7 @@
                         <br/><br/></p>
                     <h3>Mission</h3>
                     <p>
-                        Our mission at Great Travel World Travel is to empower travelers by simplifying the complexities
+                        Our mission at Great Trust World Travel is to empower travelers by simplifying the complexities
                         of travel planning, offering expert guidance, and providing unparalleled support throughout
                         their journey. We believe in making travel accessible, stress-free, and unforgettable for
                         everyone.
